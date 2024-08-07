@@ -3,9 +3,15 @@
   "author": "The Bin - Hack Club",
   "editor": "wokwi",
   "parts": [
-    { "type": "board-pi-pico-w", "id": "pico", "top": 0, "left": 0, "attrs": {} },
-    { "type": "wokwi-hc-sr04", "id": "wokwi-hc-sr04-0", "top": -113.7, "left": 53.5, "attrs": {} },
-    { "type": "wokwi-neopixel", "id": "wokwi-neopixel-0", "top": 217.3, "left": -1, "attrs": {} },
+    { "type": "board-pi-pico-w", "id": "pico", "top": 6.35, "left": 3.55, "attrs": {} },
+    {
+      "type": "wokwi-hc-sr04",
+      "id": "wokwi-hc-sr04-0",
+      "top": -113.7,
+      "left": 53.5,
+      "attrs": { "distance": "169" }
+    },
+    { "type": "wokwi-neopixel", "id": "wokwi-neopixel-0", "top": -80.3, "left": -49, "attrs": {} },
     {
       "type": "wokwi-tm1637-7segment",
       "id": "wokwi-tm1637-7segment-0",
