@@ -26,12 +26,24 @@ void loop() {
   delayMicroseconds(10);
   digitalWrite(trig, LOW);
   const int duration = pulseIn(echo, HIGH);
+  const int durationfr = duration / 58;
 
   Serial1.print("Distance in CM: ");
-  Serial1.println(duration / 58);
+  Serial1.println(durationfr);
+  
+  tm.display(0, (durationfr / 1000) % 10);
+  tm.display(1, (durationfr / 100) % 10);
+  tm.display(2, (durationfr / 10) % 10);
+  tm.display(3, durationfr % 10);
 
-  tm.display(0, (duration / 58));
-/*
+  /*
+  if durationfr > 9 (
+     tm.display(0, (durationfr));
+  ) else (
+     tm.display(0, (counter / 1000) % 10);
+     tm.display(1, (counter / 100) % 10);
+  )
+
   tm.display(0, (counter / 1000) % 10);
   tm.display(1, (counter / 100) % 10);
   tm.display(2, (counter / 10) % 10);
