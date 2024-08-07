@@ -9,7 +9,7 @@
       "id": "wokwi-hc-sr04-0",
       "top": -113.7,
       "left": 53.5,
-      "attrs": { "distance": "400" }
+      "attrs": { "distance": "63" }
     },
     {
       "type": "wokwi-tm1637-7segment",

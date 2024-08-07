@@ -6,7 +6,7 @@ const int CLK = 2;
 const int DIO = 3;
 const int trig = 27;
 const int echo = 26;
-
+const int led = 17;
 TM1637 tm(CLK, DIO);
 
 void setup() {
@@ -16,7 +16,7 @@ void setup() {
   Serial1.println("holi");
   pinMode(trig, OUTPUT);
   pinMode(echo, INPUT);
-   pinMode(LED_BUILTIN, OUTPUT);
+  pinMode(led, OUTPUT);
 }
 
 
@@ -38,12 +38,11 @@ void loop() {
   tm.display(2, (durationfr / 10) % 10);
   tm.display(3, durationfr % 10);
   
-  if durationfr < 15 (
-    digitalWrite(LED_BUILTIN, HIGH);  
-  ) else (
-    digitalWrite(LED_BUILTIN, LOW);
-  )
-
+ if (durationfr < 20 {
+    digitalWrite(led, HIGH);  
+ } else {
+    digitalWrite(led, LOW);
+ }
   /*
   if durationfr > 9 (
      tm.display(0, (durationfr));
