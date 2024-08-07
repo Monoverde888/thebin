@@ -16,7 +16,9 @@ void setup() {
   Serial1.println("holi");
   pinMode(trig, OUTPUT);
   pinMode(echo, INPUT);
+   pinMode(LED_BUILTIN, OUTPUT);
 }
+
 
 unsigned int counter = 0;
 
@@ -35,6 +37,12 @@ void loop() {
   tm.display(1, (durationfr / 100) % 10);
   tm.display(2, (durationfr / 10) % 10);
   tm.display(3, durationfr % 10);
+  
+  if durationfr < 15 (
+    digitalWrite(LED_BUILTIN, HIGH);  
+  ) else (
+    digitalWrite(LED_BUILTIN, LOW);
+  )
 
   /*
   if durationfr > 9 (

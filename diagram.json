@@ -9,15 +9,23 @@
       "id": "wokwi-hc-sr04-0",
       "top": -113.7,
       "left": 53.5,
-      "attrs": { "distance": "169" }
+      "attrs": { "distance": "400" }
     },
-    { "type": "wokwi-neopixel", "id": "wokwi-neopixel-0", "top": -80.3, "left": -49, "attrs": {} },
     {
       "type": "wokwi-tm1637-7segment",
       "id": "wokwi-tm1637-7segment-0",
       "top": -9.64,
       "left": -204.17,
       "attrs": {}
+    },
+    { "type": "wokwi-led", "id": "led1", "top": -138, "left": -63.4, "attrs": { "color": "red" } },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": 129.6,
+      "left": -48.55,
+      "rotate": 90,
+      "attrs": { "value": "1000" }
     }
   ],
   "connections": [
@@ -30,7 +38,10 @@
     [ "wokwi-tm1637-7segment-0:CLK", "pico:GP2", "green", [ "h0" ] ],
     [ "wokwi-tm1637-7segment-0:DIO", "pico:GP3", "green", [ "h0" ] ],
     [ "wokwi-hc-sr04-0:TRIG", "pico:GP27", "green", [ "v0" ] ],
-    [ "wokwi-hc-sr04-0:ECHO", "pico:GP26", "green", [ "v0" ] ]
+    [ "wokwi-hc-sr04-0:ECHO", "pico:GP26", "green", [ "v0" ] ],
+    [ "r1:1", "led1:A", "green", [ "v0" ] ],
+    [ "r1:2", "pico:GP17", "green", [ "h0" ] ],
+    [ "led1:C", "pico:GND.5", "green", [ "v0" ] ]
   ],
   "dependencies": {}
 }
