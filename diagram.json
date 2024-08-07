@@ -4,7 +4,7 @@
   "editor": "wokwi",
   "parts": [
     { "type": "board-pi-pico-w", "id": "pico", "top": 0, "left": 0, "attrs": {} },
-    { "type": "wokwi-hc-sr04", "id": "wokwi-hc-sr04-0", "top": 1.5, "left": 120.7, "attrs": {} },
+    { "type": "wokwi-hc-sr04", "id": "wokwi-hc-sr04-0", "top": -113.7, "left": 53.5, "attrs": {} },
     { "type": "wokwi-neopixel", "id": "wokwi-neopixel-0", "top": 217.3, "left": -1, "attrs": {} },
     {
       "type": "wokwi-tm1637-7segment",
@@ -22,7 +22,9 @@
     [ "wokwi-hc-sr04-0:VCC", "pico:VSYS", "red", [ "v0" ] ],
     [ "wokwi-hc-sr04-0:GND", "pico:GND.7", "black", [ "v0" ] ],
     [ "wokwi-tm1637-7segment-0:CLK", "pico:GP2", "green", [ "h0" ] ],
-    [ "wokwi-tm1637-7segment-0:DIO", "pico:GP3", "green", [ "h0" ] ]
+    [ "wokwi-tm1637-7segment-0:DIO", "pico:GP3", "green", [ "h0" ] ],
+    [ "wokwi-hc-sr04-0:TRIG", "pico:GP27", "green", [ "v0" ] ],
+    [ "wokwi-hc-sr04-0:ECHO", "pico:GP26", "green", [ "v0" ] ]
   ],
   "dependencies": {}
 }
